@@ -3,6 +3,8 @@ import Carousel from "./Carousel";
 import MovieList from "./MovieList";
 import { useDispatch } from "react-redux";
 import { layDanhSachBanner } from "reduxs/slice/bannerSlice";
+import { getDanhSachPhimSapChieu } from "reduxs/slice/filmSlice";
+import { layDanhSachPhimDangChieu } from "reduxs/slice/filmSlice";
 
 const LeftHomePage = () => {
   const ref = useRef(null);
@@ -10,6 +12,8 @@ const LeftHomePage = () => {
  useEffect(() => {
    const height = ref.current.offsetHeight;
    dispatch(layDanhSachBanner())
+   dispatch(getDanhSachPhimSapChieu())
+   dispatch(layDanhSachPhimDangChieu())
  }, []);
   return (
     <div className=" leftHomePage md:w-[75%]" ref={ref}>

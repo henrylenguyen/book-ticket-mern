@@ -4,8 +4,10 @@ import { Autoplay } from "swiper";
 import MovieCard from "./MovieCard";
 import {Keyboard } from "swiper";
 import { Navigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 const MovieList = ({title}) => {
   // const navigate = Navigate();
+  const {danhSachPhimDangChieu} = useSelector(state=>state.film)
   return (
     <div className="movie-list my-10">
       <div className="flex justify-between items-center mb-5">
@@ -24,24 +26,13 @@ const MovieList = ({title}) => {
         loop={true}
         modules={[Keyboard]}
       >
-        <SwiperSlide>
-          <MovieCard></MovieCard>
+      {danhSachPhimDangChieu?.map(item=>(
+        <SwiperSlide key={item.maPhim}>
+          <MovieCard hinhAnh={item.hinhAnh} tenPhim={item.tenPhim} danhGia={item.danhGia} ngayKhoiChieu={item.ngayKhoiChieu}></MovieCard>
+          console.log("file: MovieList.jsx:32 ~ hinhAnh:", hinhAnh)
         </SwiperSlide>
-        <SwiperSlide>
-          <MovieCard></MovieCard>
-        </SwiperSlide>
-        <SwiperSlide>
-          <MovieCard></MovieCard>
-        </SwiperSlide>
-        <SwiperSlide>
-          <MovieCard></MovieCard>
-        </SwiperSlide>
-        <SwiperSlide>
-          <MovieCard></MovieCard>
-        </SwiperSlide>
-        <SwiperSlide>
-          <MovieCard></MovieCard>
-        </SwiperSlide>
+      ))}
+        
       </Swiper>
     </div>
   );
