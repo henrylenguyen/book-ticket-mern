@@ -1,10 +1,7 @@
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper";
-import MovieCard from "./MovieCard";
-import {Keyboard } from "swiper";
-import { Navigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { Keyboard } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import MovieCard from "./MovieCard";
 const MovieList = ({title}) => {
   // const navigate = Navigate();
   const {danhSachPhimDangChieu} = useSelector(state=>state.film)

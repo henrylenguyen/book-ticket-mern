@@ -7,10 +7,10 @@ import gradient from "assets/Gradient.svg"
 const HomePage = () => {
   return (
     <div className="container mx-auto relative">
-      <div className=" flex gap-x-10 my-10 overflow-y-auto">
+      <div className=" lg:flex gap-x-10 my-10 overflow-y-auto">
         <LeftHomePage></LeftHomePage>
         <RightHomePage></RightHomePage>
-      <img src={gradient} alt="gradient" className="absolute z-[-1] opacity-[0.5] inset-0" />
+      <img src={gradient} alt="gradient" className="absolute hidden lg:block z-[-1] opacity-[0.5] inset-0" />
       </div>
       
     </div>

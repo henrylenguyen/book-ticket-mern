@@ -16,7 +16,7 @@ const LeftHomePage = () => {
    dispatch(layDanhSachPhimDangChieu())
  }, []);
   return (
-    <div className=" leftHomePage md:w-[75%]" ref={ref}>
+    <div className=" leftHomePage p-5 w-full lg:w-[75%]" ref={ref}>
       <Carousel></Carousel>
       <MovieList title={"Phim đang chiếu"}></MovieList>
       <MovieList title={"Đề xuất cho bạn"}></MovieList>

@@ -28,7 +28,7 @@ const Carousel = () => {
             style={{ backgroundImage: `url(${item.hinhAnh_background})` }}
           >
             <div className="overlay absolute inset-0 bg-[rgba(0,0,0,0.4)]"></div>
-            <div className="content grid grid-cols-3 h-full gap-x-2 relative ">
+            <div className="content grid grid-cols-1 lg:grid-cols-3 h-full gap-x-2 relative ">
               <div className="poster  overflow-hidden">
                 <img
                   src={item?.chiTietPhim?.hinhAnh}
