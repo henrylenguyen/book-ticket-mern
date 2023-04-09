@@ -29,7 +29,6 @@ const MovieList = ({title}) => {
       {danhSachPhimDangChieu?.map(item=>(
         <SwiperSlide key={item.maPhim}>
           <MovieCard hinhAnh={item.hinhAnh} tenPhim={item.tenPhim} danhGia={item.danhGia} ngayKhoiChieu={item.ngayKhoiChieu}></MovieCard>
-          console.log("file: MovieList.jsx:32 ~ hinhAnh:", hinhAnh)
         </SwiperSlide>
       ))}
         
